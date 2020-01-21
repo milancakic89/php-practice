@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, Arial, Helvetica;
+}
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  
+}
+.login-register input{
+    border-radius: 5px;
+    color: gray;
+    border:1px solid rgb(24, 223, 113);
+    min-height: 30px;
+    padding: 5px;
+    margin: 5px;
+}
+.submit-button{
+    padding: 5px;
+    background-color: cadetblue;
+    color: white !important;
+    border: none;
+    min-width: 70px;
+    margin: 10px;
+}
+.submit-button:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    
+}
+label{
+    font-size: 0.9rem;
+    color: gray;
+}
+ul li{
+    display: inline-block;
+    min-height: 40px;
+    color:#fff;
+    padding: 10px;
+   
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}
+ul li:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+.navigation{
+    position: relative;
+    text-align: right;
+    margin: 0px 0px 20px 0px;
+    width: 100%;
+    background-color: cadetblue;
+}
+.form-container{
+    border: 1px solid gray;
+    margin: 0 auto;
+    width: auto;
+    padding: 20px;
+    background-color: rgb(243, 241, 241);
+    max-width: 400px;
+}
+.message-error{
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(253, 196, 196);
+    border:1px solid red;
+    max-width: 400px;
+    color:red;
+}
+.message-succes{
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(115, 241, 189);
+    border:1px solid green;
+    max-width: 400px;
+    color: green;
+}
+.search-form{
+    left: 50%;
+    top:50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: absolute;
+}
+.search-form-input{
+    min-width: 500px;
+    min-height: 30px;
+    border: none;
+}
+.search-form-submit{
+    min-height: 30px;
+    min-width: 70px;
+    background-color: rgb(1, 59, 61);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+.input-field{
+    min-height: 25px;
+}
+.result-article{
+    min-width: 400px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(218, 216, 217);
+}
+.result-article p{
+    font-size: 18px;
+}
