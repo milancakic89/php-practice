@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $message = "";
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
     $message = '<p class="message-succes">You are allredy logged in ' . $_SESSION['email'] . "!</p>";
 } else {
     
@@ -21,7 +21,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
             //code for valid email adress, hashing password before storing to db
            // $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
            // echo $hashedPass;
-            $dsn = "mysql:host=localhost;dbname=quantox-test";
+            $dsn = "mysql:host=localhost;dbname=quantox";
             $user = "root";
             $passwd = "";
             $connectToBase = new PDO($dsn, $user, $passwd);
@@ -31,16 +31,15 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
              $check->bindValue(':pass', $pass);
              $check->execute();
              $rows = $check->fetchAll(PDO::FETCH_ASSOC);
-
+          
             if(empty($rows)){
                 //there is no username, throw and error on screen
-                print_r($rows);
                 $message = '<p class="message-succes">Username not found, check input fields</p>';
             }else{
                 $_SESSION['loggedin'] = true;
                $_SESSION['email'] = $email;
                 //saying hello to new user
-                $message = '<p class="message-succes">Welcome '.$email.'</p>';
+                $message = '<p class="message-succes">Welcome '.$_SESSION['email'].'</p>';
             }
             
 

@@ -29,11 +29,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
            if(empty($rows)){
                //there is no username, registration may proceed
-               $message = '<p class="message-succes">No result for that user in database, try other email</p>';
+               $message = '<p class="message-error">No result for that user in database, try other email</p>';
            }else{
                //display that user exists
                $showResult = true;
-               $message = '<p class="message-error">Congrats: your results</p><br>';
+               $message = '<p class="message-succes">Congrats: your results</p><br>';
 
            }
            
